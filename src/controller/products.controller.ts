@@ -3,10 +3,10 @@ import { createProduct } from "../service/products.service";
 
 export async function createProductsHandler(req: Request, res: Response) {
     try {
+        console.log(' req.body.productTitle,', req.body.productTitle,)
         const inputData = {
             productTitle: req.body.productTitle,
             category: req.body.category,
-            location: req.body.location,
             price: req.body.price,
             description: req.body.description,
         };
