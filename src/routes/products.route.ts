@@ -1,5 +1,5 @@
 import { Express, Request, Response } from "express";
-import { createProductsHandler } from "../controller/products.controller";
+import { createProductsHandler, getProductsHandler } from "../controller/products.controller";
 
 const productsRoute = (app: Express) => {
     app.get('/', (req: Request, res: Response) => {
@@ -8,6 +8,9 @@ const productsRoute = (app: Express) => {
 
     //create a product
     app.post("/api/v1/products", createProductsHandler)
+
+    //get all products
+    app.get("/api/v1/products", getProductsHandler)
 
 }
 
