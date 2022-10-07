@@ -28,7 +28,7 @@ export async function getProductsHandler(req: Request, res: Response) {
 
         const products = await getProducts()
         return res.status(201).send({
-            message: "New Products Created Successfully",
+            message: "Successfully found all products",
             data: products
         });
     } catch (e: any) {
