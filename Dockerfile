@@ -18,4 +18,4 @@ RUN yarn build
 
 EXPOSE 1337
 
-CMD ["node", "build/src/app.js"]
+CMD ["node", "build/app.js"]
